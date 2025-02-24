@@ -1,0 +1,53 @@
+FACTION : 1
+
+
+Nom : txt
+Régime: txt
+Type :  txt
+Couleur :  txt
+Emblème : txt
+Capitale : txt
+Actuelle Dirigeant : 3
+Lieux : img
+Alliés : 1
+Ennemis : 1
+
+
+Description : 
+
+hero associée : 3
+Guildes associé : 4
+Race Associé : 2
+
+RACE : 2
+
+Nom : txt
+Taille moyenne : txt
+Region présente : 1
+Hero : 3
+
+Description : txt
+
+HERO : 3
+
+Nom : txt
+Âge :  txt
+Taille : txt
+Royaume : 1
+Fonction : txt
+Guilde : 4
+Race : 2
+
+Description : txt
+
+GUILDE : 4
+
+Nom : txt
+Type : txt
+Dirigeante : 3
+Lieux : 1
+
+Description : txt
+
+
+

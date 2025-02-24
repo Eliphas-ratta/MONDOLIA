@@ -1,0 +1,38 @@
+/* Style général des cartes */
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Style des cartes de l'index */
+.home-card {
+    max-width: 500px;
+    margin: auto;
+}
+
+.home-img {
+     /* Taille spécifique aux cartes de l'accueil */
+    object-fit: cover;
+}
+
+/* Style des cartes de Faction_menu.php */
+.faction-card {
+    height: 100%; /* Pour s'assurer que toutes les cartes ont la même hauteur */
+    background-color: #1b1b1b;
+}
+
+.faction-img {
+    height: 150px; /* Taille spécifique aux images des factions */
+    object-fit: cover;
+}
+
+.faction-card:hover {
+    transform: scale(1.05);
+}
+
+.img-fluid {
+    max-height: 400px;
+    object-fit: cover;
+}
