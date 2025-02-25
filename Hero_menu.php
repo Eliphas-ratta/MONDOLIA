@@ -27,5 +27,4 @@ $heros = $query->fetchAll(PDO::FETCH_ASSOC);
 </main>
 
 <?php require_once "FooterHeader/Footer.php"; ?>
-</body>
-</html>
+
