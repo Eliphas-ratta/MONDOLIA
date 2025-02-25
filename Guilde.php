@@ -62,9 +62,10 @@ $heros = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <hr class="my-4">
 
     <h3 class="text-danger text-center">Héros associés</h3>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <?php foreach ($heros as $h): ?>
-            <div class="col">
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <?php foreach ($heros as $h): ?>
+        <div class="col">
+            <a href="Hero.php?id=<?php echo htmlspecialchars($h['id']); ?>" class="text-decoration-none">
                 <div class="card bg-dark text-white border-light h-100">
                     <?php 
                     // Vérification et correction du chemin de l'image des héros
@@ -80,9 +81,11 @@ $heros = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <p class="card-text"><?php echo htmlspecialchars($h['fonction']); ?></p>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
+            </a>
+        </div>
+    <?php endforeach; ?>
+</div>
+
 
     <h3 class="text-light mt-5">Faction Associée</h3>
     <?php if (!empty($guilde['faction_id']) && !empty($guilde['faction_image'])): ?>

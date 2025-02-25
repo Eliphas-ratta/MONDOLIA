@@ -102,45 +102,50 @@ $guildes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="row row-cols-1 row-cols-md-4 g-4">
     <?php foreach ($heros as $h): ?>
         <div class="col">
-            <div class="card bg-dark text-white border-light h-100">
-                <img src="Img/Heros/<?php echo htmlspecialchars($h['image']); ?>" class="card-img-top">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><?php echo htmlspecialchars($h['nom']); ?></h5>
+            <a href="Hero.php?id=<?php echo htmlspecialchars($h['id']); ?>" class="text-decoration-none">
+                <div class="card bg-dark text-white border-light h-100">
+                    <img src="Img/Heros/<?php echo htmlspecialchars($h['image']); ?>" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><?php echo htmlspecialchars($h['nom']); ?></h5>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     <?php endforeach; ?>
 </div>
 
-
-    <h3 class="text-danger text-center mt-5">Races associées</h3>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <?php foreach ($races as $r): ?>
-            <div class="col">
+<h3 class="text-danger text-center mt-5">Races associées</h3>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <?php foreach ($races as $r): ?>
+        <div class="col">
+            <a href="Race.php?id=<?php echo htmlspecialchars($r['id']); ?>" class="text-decoration-none">
                 <div class="card bg-dark text-white border-light h-100">
-                <img src="Img/Race/<?php echo htmlspecialchars($r['image']); ?>" class="card-img-top" alt="Image de <?php echo htmlspecialchars($r['nom']); ?>">
-
+                    <img src="Img/Race/<?php echo htmlspecialchars($r['image']); ?>" class="card-img-top" alt="Image de <?php echo htmlspecialchars($r['nom']); ?>">
                     <div class="card-body text-center">
                         <h5 class="card-title"><?php echo htmlspecialchars($r['nom']); ?></h5>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
+            </a>
+        </div>
+    <?php endforeach; ?>
+</div>
 
-    <h3 class="text-danger text-center mt-5">Guildes associées</h3>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <?php foreach ($guildes as $g): ?>
-            <div class="col">
+<h3 class="text-danger text-center mt-5">Guildes associées</h3>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <?php foreach ($guildes as $g): ?>
+        <div class="col">
+            <a href="Guilde.php?id=<?php echo htmlspecialchars($g['id']); ?>" class="text-decoration-none">
                 <div class="card bg-dark text-white border-light h-100">
-                <img src="Img/Guildes/<?php echo htmlspecialchars($g['image']); ?>" class="card-img-top" alt="Image de <?php echo htmlspecialchars($g['nom']); ?>">
-                <div class="card-body text-center">
+                    <img src="Img/Guildes/<?php echo htmlspecialchars($g['image']); ?>" class="card-img-top" alt="Image de <?php echo htmlspecialchars($g['nom']); ?>">
+                    <div class="card-body text-center">
                         <h5 class="card-title"><?php echo htmlspecialchars($g['nom']); ?></h5>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
+            </a>
+        </div>
+    <?php endforeach; ?>
+</div>
+
 
 </main>
 

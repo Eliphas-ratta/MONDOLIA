@@ -53,26 +53,13 @@ $heros = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <hr class="my-4">
 
-    <h3 class="text-danger text-center">Factions associées</h3>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <?php foreach ($factions as $faction): ?>
-            <div class="col">
-                <a href="Faction.php?id=<?php echo htmlspecialchars($faction['id']); ?>" class="text-decoration-none">
-                    <div class="card bg-dark text-white border-light h-100">
-                        <img src="<?php echo htmlspecialchars($faction['image']); ?>" class="card-img-top" alt="Image de <?php echo htmlspecialchars($faction['nom']); ?>">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><?php echo htmlspecialchars($faction['nom']); ?></h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        <?php endforeach; ?>
-    </div>
+    
 
     <h3 class="text-danger text-center mt-5">Héros associés</h3>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <?php foreach ($heros as $hero): ?>
-            <div class="col">
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <?php foreach ($heros as $hero): ?>
+        <div class="col">
+            <a href="Hero.php?id=<?php echo htmlspecialchars($hero['id']); ?>" class="text-decoration-none">
                 <div class="card bg-dark text-white border-light h-100">
                     <img src="Img/Heros/<?php echo htmlspecialchars($hero['image']); ?>" class="card-img-top" alt="Image de <?php echo htmlspecialchars($hero['nom']); ?>">
                     <div class="card-body text-center">
@@ -80,9 +67,11 @@ $heros = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <p class="card-text"><?php echo htmlspecialchars($hero['fonction']); ?></p>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
+            </a>
+        </div>
+    <?php endforeach; ?>
+</div>
+
 
 </main>
 

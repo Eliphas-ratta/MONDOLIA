@@ -44,7 +44,7 @@ require_once "FooterHeader/Header.php";
         <!-- Héros -->
         <div class="col">
             <div class="card home-card bg-secondary text-white">
-                <img src="Img/Hero/Hero_front.jpeg" class="card-img-top home-img" alt="Héros">
+                <img src="Img/Heros/Hero_front.jpeg" class="card-img-top home-img" alt="Héros">
                 <div class="card-body">
                     <h5 class="card-title">HEROS</h5>
                     <p class="card-text">Découvrez les héros qui façonnent l’histoire de ce monde.</p>
